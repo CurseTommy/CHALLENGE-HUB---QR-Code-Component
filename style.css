@@ -5,107 +5,55 @@
     --dark-blue: hsl(218, 44%, 22%);
 }
 
-html {
+* {
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
 
 body {
     font-family: 'Outfit', sans-serif;
-    margin: 0;
-}
-
-main {
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: 1fr 30px;
-    grid-template-areas:
-        "main"
-        "footer";
-    min-height: 100vh;
-}
-
-p.description {
-    font-weight: 400;
-    font-size: 15px;
-    color: var(--grayish-blue);
-    padding: 10px 35px;
-}
-
-p.title {
-    font-weight: 700;
-    font-size: 1.3rem;
+    background-color: var(--light-gray);
 }
 
 p {
-    padding: 10px 30px;
-    margin: 0px;
+    font-size: 15px;
+    font-weight: 400;
+    padding: 10px 5px;
 }
 
-section {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    grid-area: main;
-    width: 80%;
-    height: 80%;
-    align-self: center;
-    justify-self: center;
-    background-color: var(--light-gray);
-    box-shadow: 5px 24px 62px -27px var(--grayish-blue);
+p:first-of-type {
+    font-size: 1.4rem;
+    font-weight: 700;
 }
 
-div.qr {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 22%;
-    height: 70%;
+p:last-of-type {
+    color: var(--grayish-blue);
+}
+
+div.content {
+    max-width: 300px;
+    margin: 4rem auto;
     background-color: var(--white);
-    margin: auto;
+    padding: 1rem;
     text-align: center;
-    border-radius: 10px;
-    padding: 0px;
-    box-shadow: 5px 24px 62px -27px var(--grayish-blue);
+}
+
+img,
+div.content {
+    border-radius: 1rem;
 }
 
 img {
-    width: 16vw;
-    border-radius: 10px;
+    width: 100%;
 }
 
 .attribution {
     font-size: 11px;
     text-align: center;
-    grid-area: footer;
     padding: 20px;
 }
 
 .attribution a {
     color: hsl(228, 45%, 44%);
-}
-
-@media (max-width: 375px) {
-    section {
-        width: 100%;
-        height: 100%;
-        margin: 0;
-    }
-
-    div.qr {
-        width: 90%;
-        height: 63%;
-    }
-
-    img {
-        width: 75vw;
-    }
-
-    p {
-        padding: 10px 40px;
-    }
-
-    p.description {
-        padding: 10px 40px;
-    }
 }
