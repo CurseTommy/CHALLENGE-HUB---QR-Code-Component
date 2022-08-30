@@ -12,6 +12,10 @@
 }
 
 body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
     font-family: 'Outfit', sans-serif;
     background-color: var(--light-gray);
 }
@@ -33,7 +37,7 @@ p:last-of-type {
 
 div.content {
     max-width: 300px;
-    margin: 4rem auto;
+    margin: 0 auto;
     background-color: var(--white);
     padding: 1rem;
     text-align: center;
